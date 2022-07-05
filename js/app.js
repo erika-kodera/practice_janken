@@ -30,3 +30,13 @@ if (hum !== GU && hum !== CHOKI && hum !== PA) {
       break;
   }
 }
+
+  // 結果の判定
+  let msgResult = '';
+  if (hum === com) {
+    msgResult = '結果はあいこでした。';
+  } else if ((com === GU && hum === PA) || (com === CHOKI && hum === GU) || (com === PA && hum === CHOKI)) {
+    msgResult = '勝ちました。';
+  } else {
+    msgResult = '負けました。';
+  }
